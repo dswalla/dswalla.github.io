@@ -1,6 +1,6 @@
 body {
   background-color: #B4AFA8;
-  font-family: 'Garamond', 'Didact Gothic', serif;
+  font-family: 'Garamond', serif;
 }
 
 h1, h2 {
@@ -9,16 +9,53 @@ h1, h2 {
   text-align: center;
 }
 
+p {
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #FEFEF2;
+}
+
+a:hover {
+  cursor: crosshair;
+  color: #818181;
+}
+
+img {
+  padding: 2px;
+  border: 2px solid #FEFEF2;
+  background-color: #303030;
+}
+
 .interface {
   text-align: center;
-  margin-top: 20%;
+  background-color: #303030;
+  border: 2px solid #FEFEF2;
+  padding: 30px;
+  text-align: center;
+  margin-top: 18%;
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
+  color: #FEFEF2;
+  max-width: 700px;
+}
+
+.section {
+  background-color: #303030;
+  border: 2px solid #FEFEF2;
+  padding: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FEFEF2;
+  max-width: 700px;
 }
 
 #about, #projects, #contact {
-  padding: 10px;
+  margin: 10px;
 }
 
 #home:hover, #about:hover, #projects:hover, #contact:hover {
