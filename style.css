@@ -7,7 +7,6 @@ h1, h2 {
   color: #010101;
   font-weight: normal;
   text-align: center;
-  margin: 10px;
 }
 
 .interface {
@@ -22,7 +21,7 @@ h1, h2 {
   padding: 10px;
 }
 
-h1, #about, #projects, #contact:hover {
+#home:hover, #about:hover, #projects:hover, #contact:hover {
   cursor: crosshair;
-  color: #
+  color: #818181
 }
