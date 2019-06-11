@@ -1,41 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   margin: 0 auto;
-  height: 100vh;
   background-color: #fff;
 }
 
-#root {
-  height: 100%;
-}
-
 .container {
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 .header {
+  height: 100vh;
   padding: 2vw 0vw;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
-  font-size: 0.85rem;
+  align-items: center;
+  scroll-snap-align: start;
+  overflow-x: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: url('./conan-bonnie.jpg') no-repeat center/cover;
+  width: 120%;
+  height: 100vh;
+  opacity: 0.15;
 }
 
 .header-line {
-  margin: 10px 0px;
+  margin: 2px 0px;
+  font-size: 2vw;
+  color: #00330d;
+}
+
+.name {
+  font-size: 5vw;
+  margin-bottom: 7px;
 }
 
 .content {
-  flex: 2;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   margin: 0px;
   color: #fff;
+  scroll-snap-align: start;
 }
 
 .segment {
@@ -48,6 +70,7 @@ html, body {
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 0.75rem;
+  text-align: center;
 }
 
 .segment-header {
@@ -61,12 +84,10 @@ p {
 }
 
 .top-line {
-  /* background-color: #099; */
   background-color: #1b8937;
 }
 
 .bottom-line {
-  /* background-color: #573659; */
   background-color: #005415;
 }
 
@@ -91,22 +112,41 @@ a:active {
 }
 
 @media screen and (max-width: 600px) {
+  .portfolio {
+    top: 90vh;
+    right: -2rem;
+  }
+
+  .portfolio__button {
+    transform: rotate(-90deg);
+  }
+
   .header {
     font-size: 3vw;
   }
 
+  .header-line {
+    font-size: 1.15rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
   .content {
+    height: auto;
     margin: 0px;
     flex: 1.5;
   }
 
   .segment {
-    height: 100vw;
+    height: 100vh;
     width: 100%;
     font-size: 4vw;
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: 1px solid;
+    scroll-snap-align: start;
   }
 
   .resume-image {
