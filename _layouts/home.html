@@ -1,0 +1,21 @@
+---
+layout: base
+---
+<div class="home-section home-top">
+    <div class="home-section-half">
+        {% include navigation.html %}
+        <img id="sun" src={{ site.sun_icon | relative_url }} height="345" width="345" />
+    </div>
+    <div class="home-section-half">
+        <h1 class="title-header">Derek Wallace</h1>
+        <div>{{ page.description }}</div>
+    </div>
+</div>
+<div class="home-lower-section">
+    <h2 class="section-header">Portfolio</h2>
+    {% include portfolio_grid.html %}
+    <a class="portfolio-button" href="{{ "/portfolio" | relative_url }}">View More</a>
+</div>
+<div class="home-lower-section">
+    <h2 class="section-header">Contact</h2>
+</div>

@@ -1,0 +1,11 @@
+<div class="portfolio-grid">
+    {% for website in site.portfolio_items %}
+        <a href="{{ website.link }}">
+            <div class="portfolio-item">
+                <img class="portfolio-thumbnail" src="{{ website.thumbnail | relative_url}}" width="400px" /> 
+                <h3>{{ website.name }}</h3>
+                <p>{{ website.description }}</p>
+            </div>
+        </a>
+    {% endfor %}
+</div>

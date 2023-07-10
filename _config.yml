@@ -1,0 +1,11 @@
+url: "https://dswalla.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Derek Wallace" # the name of your site, e.g. ACME Corp.
+sun_icon: "/assets/svg/blue-sun.svg"
+portfolio_items:
+  - name: "Team Radiant"
+    thumbnail: "/assets/img/team_radiant_thumbnail.png"
+    link: "https://dswalla.github.io/team_radiant/"
+  - name: "Personal Art Site & Shop"
+    thumbnail: ""
+    link: "https://dswallalala-demo.myshopify.com"
