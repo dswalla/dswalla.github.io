@@ -16,7 +16,7 @@ body {
   font-size: 1.6rem;
 }
 
-.home-section {
+.home-top {
   height: 100vh;
   padding: 5vh 5vw;
 }
@@ -53,29 +53,39 @@ body {
 }
 
 .home-lower-section {
-  background-color: $colorTwo;
   height: fit-content;
   padding: 5vh 5vw;
 }
 
-.section-header {
+.portfolio-section {
+  background-color: #1D5B79;
+}
+
+.portfolio-header {
   color: $colorThree;
   font-family: "Syne";
   font-size: 3rem;
   font-weight: 700;
 }
 
-.portfolio-button, .portfolio-button:visited {
+.contact-header {
+  color: $colorTwo;
+}
+
+.page-header {
+  margin-top: 5vh;
+}
+
+.page-button, .page-button:visited {
   background-color: rgba(0,0,0,0);
-  color: $colorThree;
+  color: $colorFour;
   padding: 10px;
   border: solid;
   font-size: inherit;
-}
-
-.footer {
-  padding: 5vh 5vw;
-  font-size: 1rem;
+  display: block;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .portfolio-grid {
@@ -83,12 +93,80 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
+  row-gap: 20px;
   padding: 20px 0;
+}
+
+.portfolio-item {
+  border: 2px solid $colorFour;
+  padding: 10px;
 }
 
 .portfolio-thumbnail {
   width: 100%;
-  margin-bottom: 15px;
+  margin: 15px 0 5px;
+}
+
+.portfolio-item-description {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.contact-group {
+  width: 50%;
+  margin: 20px auto 0;
+  padding: 20px;
+  border: 3px solid $colorFour;
+}
+
+.contact-group-title {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  font-family: "Syne";
+  font-style: italic;
+  font-weight: 400;
+}
+
+.contact-form {
+  width: 100%;
+  padding: 20px 0;
+}
+
+::placeholder {
+  opacity: 1;
+}
+
+.contact-form-item {
+  border: none;
+  border-top: 3px solid $colorFour;
+  color: $colorFour;
+  display: block;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 10px 0;
+  width: 100%;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: rgba(0,0,0,0);
+}
+
+.contact-message {
+  height: 25vh;
+  border-bottom: 3px solid $colorFour;
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding: 5vh 5vw;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .contact-group {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -115,5 +193,13 @@ body {
     grid-template-columns: 100%;
     row-gap: 20px;
     padding: 20px 0;
+  }
+
+  .page-button {
+    width: 100%;
+  }
+
+  .contact-group {
+    width: 100%;
   }
 }

@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-<div class="home-section home-top">
+<div class="home-top">
     <div class="home-section-half">
         {% include navigation.html %}
         <img id="sun" src={{ site.sun_icon | relative_url }} height="345" width="345" />
@@ -11,11 +11,13 @@ layout: base
         <div>{{ page.description }}</div>
     </div>
 </div>
-<div class="home-lower-section">
-    <h2 class="section-header">Portfolio</h2>
+<div id="portfolio" class="home-lower-section portfolio-section">
+    <h2 class="portfolio-header">Portfolio</h2>
     {% include portfolio_grid.html %}
-    <a class="portfolio-button" href="{{ "/portfolio" | relative_url }}">View More</a>
+    {% if site.portfolio_items.size > 4 %}
+        <a class="page-button" href="https://github.com/dswalla">See more on my GitHub</a>
+    {% endif %}
 </div>
-<div class="home-lower-section">
-    <h2 class="section-header">Contact</h2>
+<div id="contact" class="home-lower-section contact-section">
+    {% include contact_form.html %}
 </div>

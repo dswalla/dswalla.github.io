@@ -1,10 +1,13 @@
 <div class="portfolio-grid">
     {% for website in site.portfolio_items %}
+        {% if page.layout == "home" and forloop.index > 4%}
+            {% break %}
+        {% endif %}
         <a href="{{ website.link }}">
             <div class="portfolio-item">
-                <img class="portfolio-thumbnail" src="{{ website.thumbnail | relative_url}}" width="400px" /> 
                 <h3>{{ website.name }}</h3>
-                <p>{{ website.description }}</p>
+                <img class="portfolio-thumbnail" src="{{ website.thumbnail | relative_url}}" width="400px" /> 
+                <p class="portfolio-item-description">{{ website.description }}</p>
             </div>
         </a>
     {% endfor %}

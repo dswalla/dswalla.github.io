@@ -4,8 +4,6 @@ title: "Derek Wallace" # the name of your site, e.g. ACME Corp.
 sun_icon: "/assets/svg/blue-sun.svg"
 portfolio_items:
   - name: "Team Radiant"
+    description: "A blog following the comics series Radiant Black and related titles"
     thumbnail: "/assets/img/team_radiant_thumbnail.png"
     link: "https://dswalla.github.io/team_radiant/"
-  - name: "Personal Art Site & Shop"
-    thumbnail: ""
-    link: "https://dswallalala-demo.myshopify.com"

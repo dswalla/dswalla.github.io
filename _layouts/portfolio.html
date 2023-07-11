@@ -3,5 +3,15 @@ layout: base
 ---
 <div class="page-section">
     {% include navigation.html %}
-    <img id="sun" src={{ site.sun_icon | relative_url }} height="345" width="345" />
+    <h1 class="page-header">Portfolio</h1>
+    {% include portfolio_grid.html %}
 </div>
+<style>
+    body {
+        background-color: #1D5B79;
+    }
+
+    .nav {
+        color:#468B97;
+    }
+</style>
